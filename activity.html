@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Beauty Empire Aesthetics: agency activity since June 2026</title>
+<style>
+.viz-root{color-scheme:light;--surface-1:#fcfcfb;--text-primary:#0b0b0b;--text-secondary:#52514e;--grid:#e6e5e1;--series-1:#2a78d6;--series-2:#eb6834;--series-3:#1baf7a;--series-4:#eda100;--muted-bar:#b8b7b1}
+@media (prefers-color-scheme:dark){:root:where(:not([data-theme="light"])) .viz-root{color-scheme:dark;--surface-1:#1a1a19;--text-primary:#f0efec;--text-secondary:#c3c2b7;--grid:#33332f;--series-1:#3987e5;--series-2:#d95926;--muted-bar:#5d5c57}}
+:root{color-scheme:light dark}body{margin:0;background:Canvas;font:14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
+.viz-root{background:var(--surface-1);color:var(--text-primary);padding:24px;max-width:980px;margin:auto}
+h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;margin:28px 0 2px}
+.sub{color:var(--text-secondary);margin:0 0 8px}
+.tiles{display:flex;gap:12px;flex-wrap:wrap;margin:16px 0}
+.tile{flex:1 1 120px;border:1px solid var(--grid);border-radius:8px;padding:10px 12px}
+.tile b{display:block;font-size:24px}.tile span{color:var(--text-secondary);font-size:12px}
+svg{width:100%;height:auto;display:block}
+.axis text{fill:var(--text-secondary);font-size:11px}.grid line{stroke:var(--grid)}
+.lbl{fill:var(--text-primary);font-size:11px}
+.legend{display:flex;gap:16px;color:var(--text-secondary);font-size:12px;margin:4px 0}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+#tip{position:fixed;pointer-events:none;background:var(--surface-1);color:var(--text-primary);border:1px solid var(--grid);border-radius:6px;padding:6px 8px;font-size:12px;box-shadow:0 2px 8px #0002;display:none}
+.notes{color:var(--text-secondary);font-size:13px}.notes li{margin:4px 0}
+details{margin-top:16px}table{border-collapse:collapse;font-size:12px}td,th{padding:2px 10px;white-space:nowrap;border-bottom:1px solid var(--grid);text-align:right}td:first-child,th:first-child{text-align:left}
+</style></head>
+<body><div class="viz-root">
+<h1>Beauty Empire Aesthetics: what the agency log shows since June 2026</h1>
+<p class="sub">Read on Nov 17, 2026 from the agency's GoHighLevel account (Contacts list, Appointments list and the Agent report for all users, month by month). Read only, nothing changed.</p>
+
+<div class="tiles">
+<div class="tile"><b>591</b><span>real leads Jun 12 to Nov 17 (excludes the Black Friday import)</span></div>
+<div class="tile"><b>2,267</b><span>contacts imported Nov 16 for the Black Friday text blast</span></div>
+<div class="tile"><b>63</b><span>bookings made by the agency's VAs ("AGA Booking", VA Only calendars)</span></div>
+<div class="tile"><b>2,527</b><span>texts sent by agency users (plus 43 emails)</span></div>
+<div class="tile"><b>202</b><span>calls logged in GoHighLevel, 53 min of talk time in total</span></div>
+<div class="tile"><b>5 / 14</b><span>no-shows / cancellations marked across all 131 appointments</span></div>
+</div>
+
+<h2>New leads per week</h2>
+<p class="sub">Contacts created each week (Monday start). The Nov 16 import of 2,267 old contacts is left out so the real flow stays readable.</p>
+<svg id="leads" viewBox="0 0 940 300" role="img" aria-label="Bar chart of new leads per week"></svg>
+
+<h2>Appointments per month</h2>
+<p class="sub">By appointment date. VA bookings are the agency's; spa calendar entries are mostly the spa's own copy of the same visit or self-booked online.</p>
+<div class="legend"><span><i style="background:var(--series-1)"></i>VA bookings (agency)</span><span><i style="background:var(--series-2)"></i>Spa calendar entries</span></div>
+<svg id="appts" viewBox="0 0 940 280" role="img" aria-label="Grouped bar chart of appointments per month"></svg>
+
+<h2>Calls logged per month</h2>
+<p class="sub">From the Agent report, all users. Answered and unanswered are outbound dialer calls; incoming are calls from customers; automated are workflow calls.</p>
+<div class="legend"><span><i style="background:var(--series-1)"></i>Dialer, answered</span><span><i style="background:var(--series-2)"></i>Dialer, not answered</span><span><i style="background:var(--series-3)"></i>Incoming</span><span><i style="background:var(--series-4)"></i>Automated</span></div>
+<svg id="calls" viewBox="0 0 940 280" role="img" aria-label="Stacked bar chart of calls per month"></svg>
+
+<h2>Texts and emails sent per month</h2>
+<p class="sub">From the Agent report, all users. Texts dominate; email is a side channel.</p>
+<div class="legend"><span><i style="background:var(--series-1)"></i>Texts (SMS) sent</span><span><i style="background:var(--series-2)"></i>Emails sent</span></div>
+<svg id="msgs" viewBox="0 0 940 280" role="img" aria-label="Grouped bar chart of texts and emails per month"></svg>
+
+<h2>What this says</h2>
+<ul class="notes">
+<li>Lead flow peaked mid July (80 in one week) and fell steadily to about 5 a week by November. Two weeks in late Sep and early Oct had zero new leads, which matches the Meta and Google Ads connections having expired.</li>
+<li>VA bookings track the lead flow: 23 in July and 20 in August, then about 3 a month in Sep and Oct. November rebounds to 12, mostly from the Black Friday push.</li>
+<li><b>Correction to my earlier note:</b> the dialer is logging calls. At least 295 of the 591 real leads carry an "hp call N" tag and 140 show "callmade", so Hot Prospector calls do happen; I just can't see call recordings or durations from our login.</li>
+<li>Texting was the agency's main channel: about 920 texts a month in July and August, then 435 in September, 74 in October and 51 so far in November. The Nov 16 Black Friday blast to the 2,267 imported contacts does not show in this report, so it likely went out as a bulk campaign that isn't credited to a user.</li>
+<li>Calls in GoHighLevel's own log are small: 202 calls and 53 minutes of talk since June. October had the most (79 dialer calls, 75 answered) but those averaged under 20 seconds each, which looks like voicemail drops or quick hang ups. With at least 295 leads tagged "hp call", most real calling probably happens in Hot Prospector's own system, which our login can't see.</li>
+<li>Incoming calls: 34 in total, 22 of them missed. That's worth asking the agency about, since a missed inbound call is a warm lead.</li>
+<li>Attendance is not tracked: 112 appointments are still "Confirmed" and none are marked "Showed", so the log can't tell you how many people actually came in. Your own front desk or POS records are the only way to know.</li>
+</ul>
+
+<h2>Every number by month</h2>
+<div style="overflow-x:auto"><table id="full"></table></div>
+
+<details><summary>Weekly leads and appointment table</summary>
+<table id="tbl"></table></details>
+<p class="sub" style="margin-top:12px">2,872 of 2,900 contacts were read from the list; the 28 missing rows are a page read gap and would not change the shape. Tag counts are a floor because the list shows only the first two tags per contact.</p>
+</div>
+<div id="tip"></div>
+<script>
+const leads=[["2026-06-08",1],["2026-06-15",27],["2026-06-22",32],["2026-06-29",27],["2026-07-06",22],["2026-07-13",80],["2026-07-20",66],["2026-07-27",57],["2026-08-03",55],["2026-08-10",50],["2026-08-17",37],["2026-08-24",34],["2026-08-31",18],["2026-09-07",18],["2026-09-14",13],["2026-09-21",5],["2026-09-28",0],["2026-10-05",0],["2026-10-12",5],["2026-10-19",13],["2026-10-26",19],["2026-11-02",2],["2026-11-09",8],["2026-11-16",2]];
+const appts=[["Jun",2,4],["Jul",23,27],["Aug",20,17],["Sep",3,5],["Oct",3,6],["Nov",12,9]];
+const months=["Jun","Jul","Aug","Sep","Oct","Nov 1-17"];
+//Agent report, all users: [answered, not answered, incoming, automated], [sms, email], extras
+const calls=[[3,1,1,0],[21,11,14,0],[30,6,12,0],[6,1,3,0],[75,4,4,7],[2,1,0,0]];
+const msgs=[[131,6],[921,11],[915,16],[435,4],[74,3],[51,3]];
+const full={"Contacts created (excl. Nov 16 import)":[75,232,197,52,36,13],"Opportunities created":[10,26,22,4,35,0],"Opportunities won":[8,12,11,1,4,0],"Texts sent":[131,921,915,435,74,51],"Texts failed":[0,4,4,0,0,0],"Emails sent":[6,11,16,4,3,3],"Calls total":[5,46,48,10,90,3],"Dialer calls":[4,32,36,7,79,3],"Dialer answered":[3,21,30,6,75,2],"Incoming calls":[1,14,12,3,4,0],"Incoming missed":[1,9,7,1,4,0],"Automated calls":[0,0,0,0,7,0],"Talk time":["1m 25s","6m 42s","13m 33s","6m 53s","24m 27s","5s"],"VA bookings":[2,23,20,3,3,12],"Spa calendar entries":[4,27,17,5,6,9]};
+const tip=document.getElementById('tip'),NS='http://www.w3.org/2000/svg';
+const el=(n,a,p)=>{const e=document.createElementNS(NS,n);for(const k in a)e.setAttribute(k,a[k]);p&&p.appendChild(e);return e};
+const fmt=d=>new Date(d+'T12:00').toLocaleDateString('en-US',{month:'short',day:'numeric'});
+const hover=(e,html)=>{e.addEventListener('mousemove',ev=>{tip.innerHTML=html;tip.style.display='block';tip.style.left=ev.clientX+12+'px';tip.style.top=ev.clientY+12+'px'});e.addEventListener('mouseleave',()=>tip.style.display='none')};
+const bar=(p,x,y,w,h,fill)=>{const r=Math.min(4,w/2,h);return el('path',{d:h<=0?'':`M${x},${y+h}V${y+r}Q${x},${y} ${x+r},${y}H${x+w-r}Q${x+w},${y} ${x+w},${y+r}V${y+h}Z`,fill},p)};
+function axes(svg,L,T,W,H,max,step){const g=el('g',{class:'grid'},svg),a=el('g',{class:'axis'},svg);for(let v=0;v<=max;v+=step){const y=T+H-v/max*H;el('line',{x1:L,x2:L+W,y1:y,y2:y},g);el('text',{x:L-6,y:y+4,'text-anchor':'end'},a).textContent=v}return a}
+{const s=document.getElementById('leads'),L=36,T=10,W=890,H=240,max=90,a=axes(s,L,T,W,H,max,15),bw=W/leads.length;
+leads.forEach(([d,v],i)=>{const h=v/max*H,x=L+i*bw+1;bar(s,x,T+H-h,bw-2,h,'var(--series-1)');const hit=el('rect',{x:L+i*bw,y:T,width:bw,height:H,fill:'transparent'},s);hover(hit,`Week of ${fmt(d)}<br><b>${v}</b> new leads`);
+if(i%2==0)el('text',{x:L+i*bw+bw/2,y:T+H+16,'text-anchor':'middle'},a).textContent=fmt(d);
+if(v===80||i===leads.length-1||(v===0&&d==='2026-09-28'))el('text',{class:'lbl',x:L+i*bw+bw/2,y:T+H-h-6,'text-anchor':'middle'},s).textContent=v===0?'0, 2 weeks':v});}
+{const s=document.getElementById('appts'),L=36,T=10,W=890,H=220,max=30,a=axes(s,L,T,W,H,max,10),gw=W/appts.length,bw=Math.min(48,gw/3);
+appts.forEach(([m,va,sp],i)=>{const cx=L+i*gw+gw/2;[[va,'var(--series-1)','VA bookings',-bw-1],[sp,'var(--series-2)','Spa calendar entries',1]].forEach(([v,c,n,off])=>{const h=v/max*H;bar(s,cx+off,T+H-h,bw,h,c);el('text',{class:'lbl',x:cx+off+bw/2,y:T+H-h-6,'text-anchor':'middle'},s).textContent=v;const hit=el('rect',{x:cx+off-2,y:T,width:bw+4,height:H,fill:'transparent'},s);hover(hit,`${m} 2026<br>${n}: <b>${v}</b>`)});
+el('text',{x:cx,y:T+H+16,'text-anchor':'middle'},a).textContent=m});}
+{const s=document.getElementById('calls'),L=36,T=10,W=890,H=220,max=100,a=axes(s,L,T,W,H,max,20),gw=W/months.length,bw=Math.min(64,gw/2),names=['Dialer, answered','Dialer, not answered','Incoming','Automated'];
+calls.forEach((v,i)=>{const cx=L+i*gw+gw/2;let y=T+H;v.forEach((n,k)=>{const h=n/max*H;y-=h;if(n)bar(s,cx-bw/2,y+(k?1:0),bw,Math.max(0,h-(k?1:0)),`var(--series-${k+1})`)});const tot=v.reduce((p,c)=>p+c,0);el('text',{class:'lbl',x:cx,y:y-6,'text-anchor':'middle'},s).textContent=tot;
+const hit=el('rect',{x:cx-gw/2,y:T,width:gw,height:H,fill:'transparent'},s);hover(hit,`${months[i]} 2026<br>`+names.map((n,k)=>`${n}: <b>${v[k]}</b>`).join('<br>')+`<br>Talk time: <b>${full["Talk time"][i]}</b>`);
+el('text',{x:cx,y:T+H+16,'text-anchor':'middle'},a).textContent=months[i]});}
+{const s=document.getElementById('msgs'),L=40,T=10,W=886,H=220,max=1000,a=axes(s,L,T,W,H,max,250),gw=W/months.length,bw=Math.min(48,gw/3);
+msgs.forEach(([sm,em],i)=>{const cx=L+i*gw+gw/2;[[sm,1,'Texts sent',-bw-1],[em,2,'Emails sent',1]].forEach(([v,c,n,off])=>{const h=v/max*H;bar(s,cx+off,T+H-h,bw,h,`var(--series-${c})`);el('text',{class:'lbl',x:cx+off+bw/2,y:T+H-h-6,'text-anchor':'middle'},s).textContent=v.toLocaleString();const hit=el('rect',{x:cx+off-2,y:T,width:bw+4,height:H,fill:'transparent'},s);hover(hit,`${months[i]} 2026<br>${n}: <b>${v.toLocaleString()}</b>`)});
+el('text',{x:cx,y:T+H+16,'text-anchor':'middle'},a).textContent=months[i]});}
+{const t=document.getElementById('full'),tot=v=>typeof v[0]==='number'?v.reduce((p,c)=>p+c,0).toLocaleString():'53m 05s';t.innerHTML='<tr><th>Metric</th>'+months.map(m=>`<th>${m}</th>`).join('')+'<th>Total</th></tr>'+Object.entries(full).map(([k,v])=>`<tr><td>${k}</td>${v.map(x=>`<td>${typeof x==='number'?x.toLocaleString():x}</td>`).join('')}<td><b>${tot(v)}</b></td></tr>`).join('');}
+{const t=document.getElementById('tbl');t.innerHTML='<tr><th>Week of</th><th>New leads</th></tr>'+leads.map(([d,v])=>`<tr><td>${fmt(d)}</td><td>${v}</td></tr>`).join('')+'<tr><th>Month</th><th>VA bookings / spa entries</th></tr>'+appts.map(([m,a,b])=>`<tr><td>${m}</td><td>${a} / ${b}</td></tr>`).join('');}
+</script></body></html>
